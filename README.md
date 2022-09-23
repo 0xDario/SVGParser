@@ -1,26 +1,35 @@
-## Installation of Node App
+# Compile C from source and Installation of Node App Instructions
 
-
-### 1. Compile Shared Library
+## 1. Install dependencies
 
 ```Bash
-# From the root of the parser/ directory
+sudo apt-get install libxml2-dev make gcc nodejs npm
+```
+
+## 2. Compile Shared Library
+
+From the root of the parser/ directory
+
+```Bash
 make
 ```
 
-### 2. Install
+## 3. Install
+
+From the root of the SVGApp/ directory
 
 ```Bash
-# From the root of the SVGApp/ directory
 npm install
 ```
 
-### 3. Running Server
+## 4. Running Server
+
+PORT is your personally given port number, e.g. 3000
+
+Server will be accessible at `http://localhost:PORT`
 
 ```Bash
-# PORT is your personally given port number, e.g. 1234
 npm run dev PORT
-# Server will be accessible at http://localhost:PORT
 ```
 
 ## Directory Structure
@@ -47,5 +56,7 @@ upload/
 
 # This is the directory where you put all your C parser code
 parser/
+
 ```
-Note: tested and working on Node.js ver.12.13.0
+
+Note: tested on Node.js ver.12.13.0
